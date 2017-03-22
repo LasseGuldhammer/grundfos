@@ -17,13 +17,17 @@
         <header>
         	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
         </header>
-		<h1 class="title">LOGIN</h1>        
+		<h1 class="title">REGISTER PUMP</h1>        
         <main>
-        	<h2 class="input-heading">EMAIL ADDRESS</h2>
-        	<input class="input" type="text" placeholder="Email address">
-        	<h2 class="input-heading">PASSWORD</h2>
-        	<input class="input" type="password" placeholder="Password">        	
-        	<button class="login">Login</button>
+        	<h2 class="input-heading">PUMP TYPE</h2>
+        	<input class="input" type="text" placeholder="Alpha3">
+        	<h2 class="input-heading">LOCATION</h2>
+        	<input class="input" type="text" placeholder="Floor 1, room 4">
+        	<div class="wrapper">
+				<button class="connect-pump">Connect Pump</button>
+				<img class="wifi-status" src="img/orangewifi.png" alt="connection status">
+        	</div>
+        	<button class="login">REGISTER</button>
         </main>
 	</body>
 </html>
