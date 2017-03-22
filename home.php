@@ -17,15 +17,23 @@
         <header>
         	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
         </header>
-		<h1 class="title">LOGIN</h1>
 
-        <main>
-        	<h2 class="input-heading">EMAIL ADDRESS</h2>
-        	<input class="input" type="email" placeholder="Email address">
-        	<h2 class="input-heading">PASSWORD</h2>
-        	<input class="input" type="password" placeholder="Password">
-        	<button class="login">Login</button>
-        </main>
+        <h1 class="title">HOME</h1>
+
+        <a href=#><img id="status-indicator" src="img/statuscheck.png" alt="status indicator"/></a>
+        <h2 id="status-text">2 critical issues</h2>
+
+        <aside id="dashboard-buttons">
+            <a href="register.php"></a>
+            <a href="list.php"></a>
+        </aside>
+
+        <article id="button-descriptions">
+            <h3>add pump</h3>
+            <h3>view list</h3>
+        </article>
+
+
 
 
 

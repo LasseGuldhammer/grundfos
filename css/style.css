@@ -1,11 +1,16 @@
 /* SCSS Document */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
+@font-face {
+  font-family: Grundfos7B;
+  src: url(../fonts/Grundfos7B.otf); }
 /* Header Styling */
 html, body {
   width: 100vw;
-  height: 100%; }
+  height: 100%;
+  font-family: Grundfos7B; }
 
 header {
   height: 50px;
@@ -25,17 +30,18 @@ header {
   width: 68%; }
 
 .title {
+  text-transform: uppercase;
   background: #11497b;
-  height: 1.5em;
+  font-size: 1.7em;
+  padding: 0.5em 0;
   text-align: center;
   color: #ffffff;
-  line-height: 1.5em; }
+  margin-bottom: 0; }
 
 /* Main */
 main {
+  font-family: Grundfos7B;
   display: block;
-  justify-content: center;
-  flex-direction: column;
   margin: auto 0 0 0;
   height: 100%; }
 
@@ -43,17 +49,18 @@ main {
   background: #c9c9c9;
   text-align: center;
   font-variant-caps: all-small-caps;
-  padding: 5px 0;
+  padding: 0.8em 0;
   width: 95%;
   margin: 0 auto; }
 
 .input {
+  outline: none;
   width: 95%;
   margin: 0 auto;
-  border: 5px solid #c9c9c9;
+  border: 4px solid #c9c9c9;
   display: block;
-  height: 3em;
-  padding: 0.2em; }
+  height: 4em;
+  padding: 0.5em; }
   .input:first-of-type {
     margin-bottom: 2em; }
 
@@ -67,5 +74,78 @@ main {
   color: #ffffff;
   font-variant-caps: all-small-caps;
   font-size: 1.5em; }
+
+button {
+  outline: none;
+  border: none; }
+
+/* Home */
+#status-indicator {
+  display: block;
+  max-width: 50%;
+  margin: 20vw auto 0;
+  width: auto; }
+
+#status-text {
+  text-align: center;
+  text-transform: uppercase; }
+
+#button-descriptions {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  justify-content: space-around; }
+  #button-descriptions h3 {
+    text-transform: uppercase;
+    text-align: center;
+    width: 30%; }
+
+aside {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin: 10vw auto 0; }
+  aside a {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    background-size: cover;
+    background-image: url(../img/list.png); }
+    aside a:first-of-type {
+      background-image: url(../img/addpump.png); }
+
+/* Pump list */
+#pump-list h2, #pump-list h3 {
+  margin: 0;
+  padding: 1.2em;
+  width: 100%;
+  text-align: left;
+  background: #848484;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  background-image: url(../img/dropdown.png);
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-size: 10vw; }
+#pump-list h3 {
+  background-color: #AAAAAA; }
+#pump-list .pump-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.6em 0;
+  background: url(../img/rightarrow.png) no-repeat 95%;
+  background-size: 6vw;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+  #pump-list .pump-entry h4 {
+    font-size: 1.3em;
+    text-transform: uppercase; }
+  #pump-list .pump-entry img[alt="pump image"] {
+    max-height: 22vw;
+    margin-left: 5vw; }
+  #pump-list .pump-entry img[alt="pump status"] {
+    max-height: 13vw;
+    position: relative;
+    margin-right: 15vw; }
 
 /*# sourceMappingURL=style.css.map */
