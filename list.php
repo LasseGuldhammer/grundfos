@@ -10,19 +10,14 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous">
-         </script>
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-        	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
-        </header>
+
+        <?php
+            include "includes/header.php"
+        ?>
 
         <h1 class="title">pump list</h1>
 
@@ -37,7 +32,7 @@
                     <img src="img/alpha3.jpg" alt="pump image"><h4>alpha3</h4><img src="img/statuscheck.png" alt="pump status">
                 </article>
                 <article class="pump-entry">
-                    <img src="img/magna3.jpg" alt="pump image"><h4>magna3</h4><img src="img/statusok.png" alt="pump status">
+                    <img src="img/magna3.jpg" alt="pump image"><h4>magna3</h4><img src="img/statuscritical.png" alt="pump status">
                 </article>
             </section>
 
@@ -67,20 +62,27 @@
 
             $("h2").click(function() {
                 if ($(this).next().is(":visible")) {
-                    $(this).nextUntil("h2").filter(":visible").slideToggle(250);
+                    $(this).nextUntil("h2").filter(":visible").slideToggle(300);
                 } else {
-                    $(this).nextUntil("h2").slideToggle(250);
+                    $(this).nextUntil("h2").slideToggle(300);
                 }
             });
 
 
-
             $("h3").click(function() {
                 if ($(this).is(":last-of-type")) {
-                    $(this).nextUntil("h2").slideToggle(250);
+                    $(this).nextUntil("h2").slideToggle(300);
                 } else {
-                    $(this).nextUntil("h3").slideToggle(250);
+                    $(this).nextUntil("h3").slideToggle(300);
                 }
+            });
+
+            $(".pump-entry").click(function(){
+                window.location.replace("pump_details.php");
+            });
+
+            $(".back-button").click(function() {
+                window.location.replace("home.php");
             });
 
 
