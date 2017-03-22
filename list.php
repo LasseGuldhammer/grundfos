@@ -29,6 +29,7 @@
         <section id="pump-list">
 
             <h2>maintenance room 1</h2>
+
             <h3>group 1</h3>
 
             <section class="pump-group">
@@ -40,6 +41,7 @@
                 </article>
             </section>
 
+
             <h3>group 2</h3>
 
             <section class="pump-group">
@@ -50,6 +52,7 @@
 
 
             <h2>kitchen</h2>
+
             <section class="pump-group">
                 <article class="pump-entry">
                     <img src="img/ups2.jpg" alt="pump image"><h4>ups20</h4><img src="img/statusok.png" alt="pump status">
@@ -61,9 +64,28 @@
 
 
         <script type="text/javascript" async>
-            $("h3").click(function() {
-                $(this).next(".pump-group").slideToggle();
+
+            $("h2").click(function() {
+                if ($(this).next().is(":visible")) {
+                    $(this).nextUntil("h2").filter(":visible").slideToggle(250);
+                } else {
+                    $(this).nextUntil("h2").slideToggle(250);
+                }
             });
+
+
+
+            $("h3").click(function() {
+                if ($(this).is(":last-of-type")) {
+                    $(this).nextUntil("h2").slideToggle(250);
+                } else {
+                    $(this).nextUntil("h3").slideToggle(250);
+                }
+            });
+
+
+
+
         </script>
 
     </body>
