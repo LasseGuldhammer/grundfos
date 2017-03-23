@@ -46,6 +46,12 @@ header {
   margin-bottom: 0; }
 
 /* Main */
+#POP-logo {
+  display: block;
+  height: 14vw;
+  margin: 6vw auto;
+  margin-left: auto; }
+
 main {
   font-family: Grundfos7B;
   display: block;

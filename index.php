@@ -21,6 +21,8 @@
 
 		<h1 class="title">LOGIN</h1>
 
+        <img id="POP-logo" src="img/poplogo.png" alt="Grundfos POP logo">
+
         <main>
         	<h2 class="input-heading">EMAIL ADDRESS</h2>
         	<input class="input" type="email" placeholder="Email address">
