@@ -29,7 +29,7 @@
 
             <section class="pump-group">
                 <article class="pump-entry">
-                    <img src="img/alpha3.jpg" alt="pump image"><h4>alpha3</h4><img src="img/statuscheck.png" alt="pump status">
+                    <img src="img/alpha3.jpg" alt="pump image"><h4>alpha3</h4><img src="img/statuswarning.png" alt="pump status">
                 </article>
                 <article class="pump-entry">
                     <img src="img/magna3.jpg" alt="pump image"><h4>magna3</h4><img src="img/statuscritical.png" alt="pump status">

@@ -19,8 +19,8 @@ header {
   justify-content: space-between; }
   header a[alt="home button"] {
     background-image: url(../img/home.png);
-    height: 40px;
     background-size: contain;
+    height: 40px;
     background-repeat: no-repeat;
     display: block; }
   header img {
@@ -90,10 +90,22 @@ button {
   border: none; }
 
 /* Home */
+#refresh-logout-bar {
+  margin-top: 5vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+  #refresh-logout-bar img {
+    max-height: 12vw;
+    margin: 0 4vw; }
+  #refresh-logout-bar img::after {
+    content: "logout";
+    color: black; }
+
 #status-indicator {
   display: block;
   max-width: 50%;
-  margin: 20vw auto 0;
+  margin: 10vw auto 0;
   width: auto; }
 
 #status-text {
