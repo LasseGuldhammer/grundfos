@@ -26,7 +26,7 @@
         	<input class="input" type="email" placeholder="Email address">
         	<h2 class="input-heading">PASSWORD</h2>
         	<input class="input" type="password" placeholder="Password">
-        	<button onclick="location.href = 'home.php'" class="login">Login</button>
+        	<button onclick="location.href = 'empty_dash.php'" class="login">Login</button>
         </main>
 
 
