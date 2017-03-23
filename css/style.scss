@@ -5,6 +5,7 @@ $corporate-blue: #11497b;
 $grey: #c9c9c9;
 $orange: #f49500;
 $red: #dd1f2b;
+$green: #8FCE35;
 
 * {
 	box-sizing: border-box;
@@ -263,6 +264,8 @@ aside {
 	text-transform: uppercase;
 }
 
+
+
 #pump-details h2 {
 	margin: 0 0 0.15em 0;
 	padding: 1.2em;
@@ -276,6 +279,13 @@ aside {
 	background-repeat: no-repeat;
 	background-position: 95%;
 	background-size: 10vw;
+	&#service {
+		background-image: url(../img/call.png);
+		background-repeat: no-repeat;
+		background-position: 95%;
+		background-size: 10vw;
+		background-color: green;
+	}
 }
 
 #pump-details .critical-error {

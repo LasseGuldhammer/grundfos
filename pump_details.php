@@ -35,6 +35,7 @@
        		</ul>
        		<h2>Manual & Documentation</h2>
        		<h2>Instruction Videos</h2>
+            <h2 id="service">request service</h2>
        		<h2 class="delete">Delete Pump</h2>
         </main>
 	</body>
