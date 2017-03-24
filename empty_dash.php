@@ -15,9 +15,9 @@
     </head>
     <body>
 
-        <header>
-        	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
-        </header>
+          <?php
+              include "includes/header.php"
+          ?>
 
         <h1 class="title">HOME</h1>
 
@@ -29,11 +29,6 @@
 
         <a href="register.php"><img id="status-indicator" src="img/addpump.png" alt="status indicator"/></a>
         <h2 id="status-text">add pump</h2>
-
-
-
-
-
 
     </body>
 </html>
