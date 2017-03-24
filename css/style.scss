@@ -3,15 +3,19 @@
 
 $corporate-blue: #11497b;
 $grey: #c9c9c9;
+$darkGray: #999999;
 $orange: #f49500;
 $red: #dd1f2b;
+$green: #8FCE35;
 
 * {
 	box-sizing: border-box;
+	outline: none;
 }
 
-button {	
-	border: hidden;
+@font-face {
+    font-family: Grundfos7B;
+    src: url(../fonts/Grundfos7B.otf);
 }
 
 /* Header Styling */
@@ -20,13 +24,22 @@ button {
 html, body {
 	width: 100vw;
 	height: 100%;
+	font-family: Grundfos7B;
 }
 
 header {
-	height: 50px;
 	width: 100vw;
-	margin: 0;
-		
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	a[alt="home button"] {
+		background-image: url(../img/home.png);
+		background-size: contain;
+		height: 40px;
+		background-repeat: no-repeat;
+		display: block;
+	}
+
 	img {
 		display: inline-block;
 		margin: 0;
@@ -41,42 +54,52 @@ header {
 }
 
 .grundfos-logo {
-	width: 68%;
+	width: 40%;
 }
 
 .title {
+	text-transform: uppercase;
 	background: $corporate-blue;
-	height: 1.5em;
+	font-size: 1.7em;
+	padding: 0.5em 0;
 	text-align: center;
 	color: #ffffff;
-	line-height: 1.5em;
+	margin-bottom: 0;
 }
 
 /* Main */
 
+
 main {
+	font-family: Grundfos7B;
 	display: block;
 	margin: auto 0 0 0;
-	height: auto;
+	height: 100%;
+}
+
+h2.input-heading{
+	margin-top: 7vw;
 }
 
 .input-heading {
+
 	background: $grey;
 	text-align: center;
 	font-variant-caps: all-small-caps;
-	padding: 5px 0;
+	padding: 0.8em 0;
 	width: 95%;
 	margin: 0 auto;
 }
 
 .input {
+	outline: none;
 	width: 95%;
 	margin: 0 auto;
-	border: 5px solid $grey;
+	border: 4px solid $grey;
 	display: block;
-	height: 3em;
-	padding: 0.2em;
-	
+	height: 4em;
+	padding: 0.5em;
+
 	&:first-of-type {margin-bottom:2em};
 }
 
@@ -90,6 +113,115 @@ main {
 	color: #ffffff;
 	font-variant-caps: all-small-caps;
 	font-size: 1.5em;
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+/* Home */
+
+#refresh-logout-bar {
+	margin-top: 5vw;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	img {
+		max-height: 12vw;
+		margin: 0 4vw;
+	}
+	img::after {
+		content: "logout";
+		color: black;
+	}
+}
+
+
+#status-indicator {
+	display: block;
+	max-width: 50%;
+	margin: 10vw auto 0;
+	width: auto;
+}
+
+#status-text {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#button-descriptions {
+	margin: 0 auto;
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		width: 30%;
+	}
+}
+
+aside {
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+	margin: 10vw auto 0;
+	a {
+		display: block;
+		width: 20vw;
+		height: 20vw;
+		background-size: cover;
+		background-image: url(../img/list.png);
+		&:first-of-type {
+			background-image: url(../img/addpump.png);
+		}
+	}
+}
+
+/* Pump list */
+
+#pump-list {
+	h2, h3 {
+		margin: 0;
+		padding: 1.2em;
+		width: 100%;
+		text-align: left;
+		background: $darkGray;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		background-image: url(../img/dropdown.png);
+		background-repeat: no-repeat;
+		background-position: 95%;
+		background-size: 10vw;
+	}
+	h3 {
+		background-color: $grey;
+	}
+	.pump-entry {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 0.6em 0;
+		background: url(../img/rightarrow.png) no-repeat 95%;
+		background-size: 6vw;
+		border-bottom: 2px solid rgba(0,0,0,0.1);
+
+		h4 {
+			font-size: 1.3em;
+			text-transform: uppercase;
+		}
+		img[alt="pump image"] {
+			max-height: 22vw;
+			margin-left: 5vw;
+		}
+		img[alt="pump status"] {
+			max-height: 13vw;
+			position: relative;
+			margin-right: 15vw;
+		}
+
+	}
 }
 
 /* Register Pump */
@@ -112,6 +244,7 @@ main {
 	font-variant-caps: all-small-caps;
 	font-size: 1.5em;
 	margin: 0;
+	transition: all 250ms;
 }
 
 .wifi-status {
@@ -133,19 +266,28 @@ main {
 	text-transform: uppercase;
 }
 
+
+
 #pump-details h2 {
 	margin: 0 0 0.15em 0;
 	padding: 1.2em;
 	width: 100%;
 	text-align: left;
 	color: #ffffff;
-	background: #848484;
+	background: $darkGray;
 	text-transform: uppercase;
 	font-size: 1.3em;
 	background-image: url(../img/dropdown.png);
 	background-repeat: no-repeat;
 	background-position: 95%;
-	background-size: 10vw; 
+	background-size: 10vw;
+	&#service {
+		background-image: url(../img/call.png);
+		background-repeat: no-repeat;
+		background-position: 95%;
+		background-size: 10vw;
+		background-color: green;
+	}
 }
 
 #pump-details .critical-error {

@@ -12,12 +12,14 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
-    </head>    
-    <body>        
-        <header>
-        	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
-        </header>
-		<h1 class="title">PUMP DETAILS</h1>        
+    </head>
+    <body>
+
+        <?php
+            include "includes/header.php"
+        ?>
+
+		<h1 class="title">PUMP DETAILS</h1>
         <main id="pump-details">
 			<section class="wrapper">
 				<img class="pump-image" src="img/magna3.jpg" alt="magna pump">
@@ -33,7 +35,16 @@
        		</ul>
        		<h2>Manual & Documentation</h2>
        		<h2>Instruction Videos</h2>
+            <h2 id="service">request service</h2>
        		<h2 class="delete">Delete Pump</h2>
         </main>
 	</body>
+
+    <script type="text/javascript">
+
+    $(".back-button").click(function() {
+        window.location.replace("list.php");
+    });
+
+    </script>
 </html>

@@ -15,20 +15,20 @@
     </head>
     <body>
 
-        <?php
-                include "includes/header.php"
-        ?>
+          <?php
+              include "includes/header.php"
+          ?>
 
-		<h1 class="title">LOGIN</h1>
+        <h1 class="title">HOME</h1>
+
+        <section id="refresh-logout-bar">
+                <img id="refresh-button" src="img/refresh.png" />
+                <img src="img/logout.png" onclick="location.href = 'index.php'" />
+        </section>
 
 
-        <main>
-        	<h2 class="input-heading">EMAIL ADDRESS</h2>
-        	<input class="input" type="email" placeholder="Email address">
-        	<h2 class="input-heading">PASSWORD</h2>
-        	<input class="input" type="password" placeholder="Password">
-        	<button onclick="location.href = 'empty_dash.php'" class="login">Login</button>
-        </main>
+        <a href="register.php"><img id="status-indicator" src="img/addpump.png" alt="status indicator"/></a>
+        <h2 id="status-text">add pump</h2>
 
     </body>
 </html>

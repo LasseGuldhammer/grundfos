@@ -12,12 +12,14 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
-    </head>    
-    <body>        
-        <header>
-        	<img class="back-button" src="img/back.png" alt="back button"><img class="grundfos-logo" src="img/grundfos_logo.jpg" alt="Grundfos logo"><img class="home-button" src="img/home.png" alt="home button">
-        </header>
-		<h1 class="title">REGISTER PUMP</h1>        
+    </head>
+    <body>
+
+        <?php
+            include "includes/header.php"
+        ?>
+
+		<h1 class="title">REGISTER PUMP</h1>
         <main>
         	<h2 class="input-heading">PUMP TYPE</h2>
         	<input class="input" type="text" placeholder="Alpha3">
@@ -27,7 +29,42 @@
 				<button class="connect-pump">Connect Pump</button>
 				<img class="wifi-status" src="img/orangewifi.png" alt="connection status">
         	</div>
-        	<button class="login">REGISTER</button>
+        	<button onclick="location.href = 'home.php'" class="login">REGISTER</button>
         </main>
 	</body>
+
+    <script type="text/javascript" async>
+
+        var connected = false;
+
+
+        $(".back-button").click(function() {
+            window.location.replace("home.php");
+        });
+
+
+        $("button.connect-pump").click(function(){
+            var connection = Math.random();
+            var image = $(this).next();
+            function changePic (color) {
+                image.fadeOut();
+                setTimeout(function(){image.attr("src","img/"+color+"wifi.png")},300);
+                image.fadeIn();
+            };
+            if (connection < 0.7 && !connected) {
+                changePic("red");
+                $(".connect-pump").css("background-color","#dd1f2b");
+                $(".connect-pump").html("try again");
+
+            }
+            else if (!connected) {
+                changePic("green");
+                connected = true;
+                $(".connect-pump").css("background-color","#8FCE35");
+                $(".connect-pump").html("pump connected");
+            };
+        });
+
+    </script>
+
 </html>
