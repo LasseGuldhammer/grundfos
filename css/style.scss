@@ -3,6 +3,7 @@
 
 $corporate-blue: #11497b;
 $grey: #c9c9c9;
+$darkGray: #999999;
 $orange: #f49500;
 $red: #dd1f2b;
 $green: #8FCE35;
@@ -186,7 +187,7 @@ aside {
 		padding: 1.2em;
 		width: 100%;
 		text-align: left;
-		background: #848484;
+		background: $darkGray;
 		text-transform: uppercase;
 		font-size: 1.3em;
 		background-image: url(../img/dropdown.png);
@@ -195,7 +196,7 @@ aside {
 		background-size: 10vw;
 	}
 	h3 {
-		background-color: #AAAAAA;
+		background-color: $grey;
 	}
 	.pump-entry {
 		display: flex;
@@ -273,7 +274,7 @@ aside {
 	width: 100%;
 	text-align: left;
 	color: #ffffff;
-	background: #848484;
+	background: $darkGray;
 	text-transform: uppercase;
 	font-size: 1.3em;
 	background-image: url(../img/dropdown.png);

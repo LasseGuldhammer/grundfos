@@ -142,7 +142,7 @@ aside {
   padding: 1.2em;
   width: 100%;
   text-align: left;
-  background: #848484;
+  background: #999999;
   text-transform: uppercase;
   font-size: 1.3em;
   background-image: url(../img/dropdown.png);
@@ -150,7 +150,7 @@ aside {
   background-position: 95%;
   background-size: 10vw; }
 #pump-list h3 {
-  background-color: #AAAAAA; }
+  background-color: #c9c9c9; }
 #pump-list .pump-entry {
   display: flex;
   align-items: center;
@@ -210,7 +210,7 @@ aside {
   width: 100%;
   text-align: left;
   color: #ffffff;
-  background: #848484;
+  background: #999999;
   text-transform: uppercase;
   font-size: 1.3em;
   background-image: url(../img/dropdown.png);
